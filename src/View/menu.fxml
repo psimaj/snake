@@ -1,0 +1,62 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="Control.MenuController"
+          xmlns:fx="http://javafx.com/fxml"
+          alignment="center"
+          hgap="10"
+          fx:id="menuGrid">
+
+    <ScrollPane maxHeight="100"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="0"
+                GridPane.columnSpan="2">
+
+        <Text fx:id="tutorialText"
+              text="Introduction: &#13;&#10;Use the standard arrow keys to steer the snake. &#13;&#10;The snake grows from its head up with each apple eaten. &#13;&#10;The longer the snake, the greater your score will be. &#13;&#10;The snake dies if it touches itself with its head. &#13;&#10;The snake lives on a torus, so the borders aren't deadly. &#13;&#10;Use the fields below to adjust the parameters of the game. &#13;&#10;The first two parameters define the dimensions of the game area. &#13;&#10;The third parameter is the time between each snake's move. &#13;&#10;The game won't launch unless the parameters are all positive integers with dimensions being greater than 2.">
+
+        </Text>
+
+    </ScrollPane>
+
+    <Label GridPane.columnIndex="0"
+           GridPane.rowIndex="1">
+        Height:
+    </Label>
+
+    <TextField fx:id="heightField"
+               GridPane.columnIndex="1"
+               GridPane.rowIndex="1"/>
+
+    <Label GridPane.columnIndex="0"
+          GridPane.rowIndex="2">
+        Width:
+    </Label>
+
+    <TextField fx:id="widthField"
+               GridPane.columnIndex="1"
+               GridPane.rowIndex="2"/>
+
+    <Label GridPane.columnIndex="0"
+          GridPane.rowIndex="3">
+        Move time (ms):
+    </Label>
+
+    <TextField fx:id="timeField"
+               GridPane.columnIndex="1"
+               GridPane.rowIndex="3"/>
+
+    <Button fx:id="startButton"
+            text="Start"
+            GridPane.columnIndex="0"
+            GridPane.rowIndex="4"
+            GridPane.columnSpan="2"
+            maxWidth="Infinity"
+            onAction="#startButtonPressed"/>
+
+</GridPane>
