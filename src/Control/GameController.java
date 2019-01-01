@@ -124,6 +124,7 @@ public class GameController {
         new Thread(() -> {
             String fileName = "/sounds/roblox-death-sound.mp3";
             MediaPlayer mp = new MediaPlayer(new Media(getClass().getResource(fileName).toString()));
+            mp.setVolume(mp.getVolume()/2);
             mp.play();
         }).start();
     }
