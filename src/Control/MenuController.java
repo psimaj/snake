@@ -38,7 +38,7 @@ public class MenuController {
         startNewGame();
     }
 
-    private void startNewGame() {
+    public void startNewGame() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("View/game.fxml"));
             Parent root = loader.load();
